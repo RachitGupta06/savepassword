@@ -101,16 +101,12 @@ a {
             <section id="login-form">
                
 				<h2>Sign In</h2>
-        <form id='loginForm' target="passwordIframe" method='POST' action="blank.php">
-                    
-                    <label for="username">Username:</label>
-                    <input name='email' type='text' st='Email'>
-                    <label for="password">Password:</label>
-                    <input name='pass' type='password' st='Password'>
-                    <button type='submit'>SAVE</button>  
-                </form>
-                <iframe src="blank.php" id="temp" name="temp" style="display:none"></iframe>
-                <form target="temp" onsubmit="yourAjaxCall();">
+        <form id="loginForm" action="your_login_action.php" method="post">
+          <!-- Use specific name attributes for username and password fields -->
+          <input type="text" name="username" placeholder="Username">
+          <input type="password" name="password" placeholder="Password">
+          <button type="submit">Login</button>
+      </form>
             </section>
         </main>
         
